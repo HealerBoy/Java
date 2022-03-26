@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 一对一的映射查询 -->
 <mapper namespace="dao.IPerson">
     <select id="findPersonById" parameterType="int" resultMap="IdCardWithPersonResult">
         select * from person where id = #{id}

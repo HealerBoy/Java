@@ -1,13 +1,13 @@
 package bean;
 
 import java.util.List;
-
+//一对多，多对多查询
 public class Product {
-    private int pid;
-    private String goodsName;
-    private int price;
-    private int typeId;
-    private List<Orders> ordersList;
+    private int pid;                    //商品ID
+    private String goodsName;           //商品名称
+    private int price;                  //商品价格
+    private int typeId;                 //商品类别ID
+    private List<Orders> ordersList;    //关联订单表
 
     public int getPid() {
         return pid;

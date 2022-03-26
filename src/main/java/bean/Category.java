@@ -1,11 +1,11 @@
 package bean;
 
 import java.util.List;
-
+//一对多查询
 public class Category {
-    private int cid;
-    private String typeName;
-    private List<Product> productList;
+    private int cid;                    //类别ID
+    private String typeName;            //类别名称
+    private List<Product> productList;  //关联商品表
 
     public int getCid() {
         return cid;

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 简单查询 -->
 <mapper namespace="dao.IStudent">
     <sql id="studentColumns">id=#{id}</sql>
     <sql id="someinclude">#{name},#{age},#{sex},#{phone},#{claesses}</sql>

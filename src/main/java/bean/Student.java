@@ -1,12 +1,13 @@
 package bean;
 
 public class Student {
-    int id;
-    String name;
-    int age;
-    String sex;
-    String phone;
-    String classes;
+    //简单的增删改查
+    private int id;                    //学生ID
+    private String name;               //学生姓名
+    private int age;                   //学生年龄
+    private String sex;                //学生性别
+    private String phone;              //学生电话
+    private String classes;            //学生班级
     public Student() {
         super();
     }

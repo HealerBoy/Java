@@ -1,10 +1,10 @@
 package bean;
 
 public class Users {
-    private int id;
-    private String name;
-    private String email;
-    private String phone;
+    private int id;             //用户ID
+    private String name;        //用户姓名
+    private String email;       //用户邮箱
+    private String phone;       //用户电话
 
     public int getId() {
         return id;

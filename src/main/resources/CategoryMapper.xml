@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 映射一对多的关联查询 -->
 <mapper namespace="dao.IProduct">
     <select id="findCategoryWithProduct" parameterType="int" resultMap="CategoryWithProductResult">
         select c.*,p.* from category c left join product p on p.typeid=c.cid where p.pid=#{id}

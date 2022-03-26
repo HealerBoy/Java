@@ -3,9 +3,9 @@ package bean;
 import java.util.List;
 
 public class Orders {
-    private int id;
-    private String number;
-    private List<Product> productList;
+    private int id;                     //订单ID
+    private String number;              //订单号
+    private List<Product> productList;  //关联商品表
     public int getId() {
         return id;
     }

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 多对多的映射查询 -->
 <mapper namespace="dao.IProduct">
     <select id="findOrdersWithProduct" parameterType="int" resultMap="OrdersWithProductResult">
         select o.*,op.*,p.* from orders o,product p,orders_product op where o.id=op.orders_id and p.pid=op.product_id and o.id=#{id}

@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.Reader;
-
+//获取sqlSession对象
 public class MybatisUtils {
     private static Reader reader=null;
     private static String config="mybatis-config.xml";
@@ -17,8 +17,5 @@ public class MybatisUtils {
         }
         SqlSessionFactory sqlSessionFactory=new SqlSessionFactoryBuilder().build(reader);
         return sqlSessionFactory.openSession();
-    }
-    public static void Destroy() throws IOException {
-        MybatisUtils.getSqlSession().close();
     }
 }

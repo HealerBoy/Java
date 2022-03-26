@@ -1,6 +1,7 @@
 package bean;
 
 public class Person {
+    //一对一查询
     private int id;         //人员ID
     private String name;    //姓名
     private int age;        //年龄

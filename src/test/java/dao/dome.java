@@ -7,6 +7,6 @@ public class dome {
         logger.info("this is info");
         logger.debug("this is debug");
         logger.error("this is error");
-        System.out.print("Hello World!!!");
+        System.out.print("Hello World!!!！");
     }
 }

@@ -1,6 +1,7 @@
 package bean;
 
 public class Users {
+    //基于注解的简单查询
     private int id;             //用户ID
     private String name;        //用户姓名
     private String email;       //用户邮箱

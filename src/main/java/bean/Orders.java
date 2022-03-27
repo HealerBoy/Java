@@ -1,7 +1,7 @@
 package bean;
 
 import java.util.List;
-
+//多对多查询
 public class Orders {
     private int id;                     //订单ID
     private String number;              //订单号

@@ -46,6 +46,9 @@ public class JunitTest {
         System.out.println(ordersList);
         sqlSession.close();
     }
+    /*
+    * 基于注解的简单查询
+    * */
     @Test
     public void selectUsersTest(){
         SqlSession sqlSession= MybatisUtils.getSqlSession();
@@ -54,6 +57,9 @@ public class JunitTest {
         System.out.println(users.getName());
         sqlSession.close();
     }
+    /*
+     * 基于注解的简单插入
+     * */
     @Test
     public void insertUsersTest(){
         SqlSession sqlSession= MybatisUtils.getSqlSession();
@@ -72,6 +78,9 @@ public class JunitTest {
         sqlSession.commit();
         sqlSession.close();
     }
+    /*
+     * 基于注解的简单修改
+     * */
     @Test
     public void updateUsersTest(){
         SqlSession sqlSession= MybatisUtils.getSqlSession();
@@ -90,6 +99,9 @@ public class JunitTest {
         sqlSession.commit();
         sqlSession.close();
     }
+    /*
+     * 基于注解的简单删除
+     * */
     @Test
     public void deleteUsersTest(){
         SqlSession sqlSession=MybatisUtils.getSqlSession();
@@ -101,6 +113,41 @@ public class JunitTest {
             System.out.println("数据删除失败！");
         }
         sqlSession.commit();
+        sqlSession.close();
+    }
+    /*
+     * 基于注解的一对一查询
+     * */
+    @Test
+    public void selectPersonByIdTest(){
+        SqlSession sqlSession=MybatisUtils.getSqlSession();
+        PersonMapper mapper=sqlSession.getMapper(PersonMapper.class);
+        Person person= mapper.selectPersonById(1);
+        System.out.println(person.getCard());
+        sqlSession.close();
+    }
+    /*
+     * 基于注解的一对多查询
+     * */
+    @Test
+    public void selectCategoryByIdTest(){
+        SqlSession sqlSession=MybatisUtils.getSqlSession();
+        ProductMapper mapper=sqlSession.getMapper(ProductMapper.class);
+        List<Product> productList=mapper.selectProductByCategoryId(2);
+        for (Product product:productList) {
+            System.out.println(product.getGoodsName());
+        }
+        sqlSession.close();
+    }
+    /*
+     * 基于注解的多对多查询
+     * */
+    @Test
+    public void selectOrdersByIdTest(){
+        SqlSession sqlSession=MybatisUtils.getSqlSession();
+        OrdersMapper mapper=sqlSession.getMapper(OrdersMapper.class);
+        Orders orders =mapper.selectOrdersById(1);
+        System.out.println(orders);
         sqlSession.close();
     }
 }

